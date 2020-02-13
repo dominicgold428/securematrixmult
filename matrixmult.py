@@ -96,6 +96,8 @@ def matrixmult(A, B):
         l = len(A)
         k = l
         d = len(B)
+        if (len(A) == len(A[0])):
+            return matrixmultsquare(A, B)
         if l<d: #so l<d
             if d%l != 0: #so l does not divide d, we need to append 0s
                 A = appendzeros(A, l, d)
